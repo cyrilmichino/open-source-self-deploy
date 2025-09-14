@@ -1,13 +1,25 @@
 {
-  "name": "project",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "open-source-self-deploy",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyrilmichino/open-source-self-deploy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyrilmichino/open-source-self-deploy/issues"
+  },
+  "homepage": "https://github.com/cyrilmichino/open-source-self-deploy#readme",
+  "description": "",
   "dependencies": {
     "astro": "^5.13.7"
   }
