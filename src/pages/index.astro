@@ -2,15 +2,20 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { ImgAttributes } from 'astro:assets';
+import PlaceholderImage from '../assets/placeholder.png';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const title = SITE_TITLE;
 const description = SITE_DESCRIPTION;
+const imgAttributes: ImgAttributes = {
+  alt: 'Placeholder image',
+  width: 400,
+  height: 300,
+};
 ---
 <html>
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
+  <BaseHead title={title} description={description} />
   <body>
     <Header />
     <div>
@@ -23,6 +28,27 @@ const description = SITE_DESCRIPTION;
         </form>
       </search>
       <p>Built by <a href="cyril.michino.co.ke">Cyril Michino</a></p>
+    </div>
+    <div>
+      <h2>Featured Guides</h2>
+      <div>
+        <a href="/guides/guide-1"></a><article>
+          <img src={PlaceholderImage} {...imgAttributes} />
+          <h3>Guide 1 Title</h3>
+          <p>Brief description of Guide 1.</p>
+        </article></a>
+        <a href="/guides/guide-2"></a><article>
+          <img src={PlaceholderImage} {...imgAttributes} />
+          <h3>Guide 2 Title</h3>
+          <p>Brief description of Guide 2.</p>
+        </article></a>
+        <a href="/guides/guide-3"></a><article>
+          <img src={PlaceholderImage} {...imgAttributes} />
+          <h3>Guide 3 Title</h3>
+          <p>Brief description of Guide 3.</p>
+        </article></a>
+      </div>
+      <a href="/guides"><button>See All Guides</button></a>
     </div>
     <div>
       <h2>This project runs on community effort. If you find it useful, consider supporting or contributing.</h2>
