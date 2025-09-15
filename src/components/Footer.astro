@@ -1,0 +1,14 @@
+---
+import { string } from 'astro:schema';
+import { SITE_TITLE } from '../consts';
+
+const year = new Date().getFullYear();
+---
+<footer>
+    <p>© {year} {SITE_TITLE} – Built by <a href="cyril.michino.co.ke">Cyril Michino</a></p>
+    <nav>
+        <a href="/legal#terms">Terms</a>
+        <a href="/legal#privacy">Privacy</a>
+        <a href="/legal#cookies">Cookies</a>
+    </nav>
+</footer>

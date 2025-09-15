@@ -1,17 +1,36 @@
 ---
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const title = SITE_TITLE;
+const description = SITE_DESCRIPTION;
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
 <html>
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
   <body>
-    <h1>Hello, World!</h1>
+    <Header />
+    <div>
+      <h1>Deploy Open-Source Alternatives with Confidence</h1>
+      <p>Step-by-step guides to self-host powerful open-source apps that replace expensive SaaS tools.</p>
+      <search>
+        <form action="" method="">
+          <input type="text" name="query" placeholder="Search guides..." />
+          <button type="submit">Search</button>
+        </form>
+      </search>
+      <p>Built by <a href="cyril.michino.co.ke">Cyril Michino</a></p>
+    </div>
+    <div>
+      <h2>This project runs on community effort. If you find it useful, consider supporting or contributing.</h2>
+      <div>
+        <button>Buy Me a Coffee</button>
+        <button>Contribute on GitHub</button>
+      </div>
+    </div>
+    <Footer />
   </body>
 </html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
